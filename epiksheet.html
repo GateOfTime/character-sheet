@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javascript character sheet - Hikaru</title>
+<link rel="stylesheet" type="text/css" href="epiksheet.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+</head>
+<body ng-app="myAttr">
+<div id="wrapper">
+<script src="epikController.js"></script>
+  <div id="container_left">
+			<div id="logo"><img src="images/epiklogo.png"/></div>
+      <div class="skills-menu">
+        <table>
+          <div class="center">
+              Skills
+          </div>
+          <tr>
+            <th>
+              Active
+            </th>
+            <th>
+              Passive
+            </th>
+          </tr>
+          <tr>
+            <td>
+              derp
+            </td>
+            <td>
+              derp
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              derp
+            </td>
+            <td>
+              derp
+            </td>
+          </tr>
+          <tr>
+
+            <td>
+              derp
+            </td>
+            <td>
+              derp
+            </td>
+          </tr>
+          <tr>
+
+            <td>
+              derp
+            </td>
+            <td>
+              derp
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              derp
+            </td>
+            <td>
+              derp
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              derp
+            </td>
+            <td>
+              derp
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <div id="container_right">
+    <!-- <div>
+    start controlling charspecs????
+   -->
+<div class="flex">
+
+    <div class="left">
+      <div class="title"></div>
+    </div>
+
+<div class="right" ng-controller="charSpecs">
+<div id="main">
+  <h1>{{characterCore.name}}</h1>
+</div>
+<div class="info">
+  <div class="basic_info">
+    <h2>{{characterCore.age}} Years old</h2>
+  </div>
+  <div class="basic_info">
+    <h2>{{characterCore.gender}}</h2>
+  </div>
+  <div class="basic_info">
+    <h3>{{characterCore.race}}</h3>
+  </div>
+</div>
+</div>
+</div>
+<div class="flex">
+  <div class="lower-right">
+  <div class="lower-box">
+    <div class="center">
+      Core Aspects
+    </div>
+    <div class="skills-menu" ng-controller="charSpecs">
+      <table>
+        <tr>
+          <th>
+            Roots
+          </th>
+          <td>
+            {{characterCore.roots}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Origin
+          </th>
+          <td>
+            {{characterCore.origin}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Stress
+          </th>
+          <td>
+             {{characterCore.stress}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            types
+          </th>
+          <td>
+            {{characterCore.types}}
+          </td>
+        </tr>
+      </table>
+          <div class="center">
+            Colors
+          </div>
+      <table>
+        <tr>
+          <th>
+            Hair
+          </th>
+          <td>
+            {{characterCore.colors.hair}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Eyes
+          </th>
+          <td>
+            {{characterCore.colors.eyes}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Skin
+          </th>
+          <td>
+            {{characterCore.colors.skin}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Outfit
+          </th>
+          <td>
+             {{characterCore.colors.outfit}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="lower-box" ng-controller="charSpecs">
+    <div>
+      <div class="center">
+      <b>Fighting Style</b>: {{characterCore.fightstyle}}</div>
+      <div class="skills-menu">
+      <table>
+        <tr>
+          <th>
+            Weapons: {{characterCore.weapons.type}}
+          </th>
+          <td>
+             +
+          </td>
+        </tr>
+      </table>
+      <div class="center">
+        {{characterCore.weapons.weapon1.name + ' ' + characterCore.weapons.weapon1.category}}
+      </div>
+      <table>
+        <tr>
+          <th>
+            Runes
+          </th>
+          <td>
+             {{characterCore.weapons.weapon1.runesused + " of " + characterCore.weapons.weapon1.runeslots}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Gem Slots
+          </th>
+          <td>
+             {{characterCore.weapons.weapon1.gemsused + " of " + characterCore.weapons.weapon1.gemslots}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Materials
+          </th>
+          <td>
+            {{characterCore.weapons.weapon1.materials}}
+          </td>
+        </tr>
+      </table>
+      <div class="center">
+        {{characterCore.weapons.weapon2.name + ' ' + characterCore.weapons.weapon2.category}}
+        </div>
+        <table>
+          <tr>
+            <th>
+              Runes
+            </th>
+            <td>
+               {{characterCore.weapons.weapon2.runesused + " of " + characterCore.weapons.weapon2.runeslots}}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Gem Slots
+            </th>
+            <td>
+               {{characterCore.weapons.weapon2.gemsused + " of " + characterCore.weapons.weapon2.gemslots}}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Materials
+            </th>
+            <td>
+              {{characterCore.weapons.weapon2.materials}}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="lower-box">
+    <div class="center">
+      Stats
+    </div>
+    <table ng-controller="attrCtrl">
+      <tr>
+        <th>
+          Stat
+        </th>
+        <th>
+          Base
+        </th>
+        <th>
+          +
+        </th>
+        <th>
+          Total
+        </th>
+      </tr>
+      <tr>
+        <th>
+          {{attribute[1].name}}
+        </th>
+        <td>
+          {{attribute[1].stat}}
+        </td>
+        <td>
+          {{attribute[1].bonus}}
+        </td>
+        <td>
+          {{attribute[1].stat+attribute[1].bonus}}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{attribute[2].name}}
+        </th>
+        <td>
+          {{attribute[2].stat}}
+        </td>
+        <td>
+          {{attribute[2].bonus}}
+        </td>
+        <td>
+          {{attribute[2].stat+attribute[2].bonus}}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{attribute[3].name}}
+        </th>
+        <td>
+          {{attribute[3].stat}}
+        </td>
+        <td>
+          {{attribute[3].bonus}}
+        </td>
+        <td>
+          {{attribute[3].stat+attribute[3].bonus}}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{attribute[4].name}}
+        </th>
+        <td>
+          {{attribute[4].stat}}
+        </td>
+        <td>
+          {{attribute[4].bonus}}
+        </td>
+        <td>
+          {{attribute[4].stat+attribute[4].bonus}}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{attribute[5].name}}
+        </th>
+        <td>
+          {{attribute[5].stat}}
+        </td>
+        <td>
+          {{attribute[5].bonus}}
+        </td>
+        <td>
+          {{attribute[5].stat+attribute[5].bonus}}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{attribute[6].name}}
+        </th>
+        <td>
+          {{attribute[6].stat}}
+        </td>
+        <td>
+          {{attribute[6].bonus}}
+        </td>
+        <td>
+          {{attribute[6].stat+attribute[6].bonus}}
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="lower-box" ng-controller="charSpecs">
+    <div class="center">
+      Traits
+    </div>
+    <ul>
+      <li ng-repeat="x in characterCore.traits">
+        {{x}}
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div ng-controller="attrCtrl">
+<div class="flex">
+  <div class="lower-right">
+    <div class="roll-sheet">
+      <form action="" id="RollSheet" onsubmit="return false;">
+      <fieldset>
+
+        <div class="center">
+          <label>Roll With:</label>
+          <select
+          ng-model="myAttrib"
+          ng-options="attr.name for attr in attribute">
+          </select>
+          <label>Action:</label>
+          <select ng-model="myAction" ng-options= "act.name for act in actions">
+          </select>
+          <!-- <p>
+            {{ {selected_action:myAction} }}
+          </p> -->
+        </div>
+        Attribute <input type="text" value="{{myAttrib.stat}}" disabled size="3"/>
+        + Attribute Bonus <input type="text"  value="{{myAttrib.bonus}}" disabled size="3"/> +
+        (Roll)<input type="text" ng-model="dievalue"  id="atkRoll" value="{{dievalue}}" disabled size="3" /> +
+        (bonus)<input type="text" name="atkBonus" id="atkBonus" class="atkBonus" value="{{myAction.bonus}}" disabled size="3"/> = Total:
+        <input type="text" id="atkTotal" ng-model="theTotal" value="{{theTotal}}" disabled size="3"/> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" ng-model="myAttrib" class="btn" id="RollAttack" ng-click="rollCalc()" value="Roll!" />
+      </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="flex">
+  <div class="lower-right">
+    <div class="roll-sheet">
+      <div ng-controller="rollCtrl">
+<form>
+  <fieldset>
+    <div class="center">
+      <label>Your roll: </label>
+      <input type="text" value="{{dValue}}" disabled size="3" />
+    </div>
+<div class="dice-area">
+
+  <div>
+    <label>Standard Dice</label><br />
+
+    <input type="submit" ng-click="rollDice(4)" value="d4" />
+    <input type="submit" ng-click="rollDice(6)" value="d6" />
+    <input type="submit" ng-click="rollDice(8)" value="d8" />
+    <input type="submit" ng-click="rollDice(10)" value="d10" />
+    <input type="submit" ng-click="rollDice(12)" value="d12" />
+    <input type="submit" ng-click="rollDice(20)" value="d20" />
+    <input type="submit" ng-click="rollDice(100)" value="d100" />
+    </div>
+
+<div>
+  <label>Odd/non standard dice</label><br />
+  <input type="submit" ng-click="rollDice(5)" value="d5" />
+  <input type="submit" ng-click="rollDice(16)" value="d16" />
+  <input type="submit" ng-click="rollDice(18)" value="d18" />
+  <input type="submit" ng-click="rollDice(21)" value="d21" />
+  <input type="submit" ng-click="rollDice(27)" value="d27" />
+  <input type="submit" ng-click="rollDice(30)" value="d30" />
+  <input type="submit" ng-click="rollDice(50)" value="d50" />
+  <input type="submit" ng-click="rollDice(250)" value="d250" />
+</div>
+<div style="overflow: auto; height: 250px; text-align: center;">
+  <label>Previous rolls <br />(Most recent at top):</label>
+  <div ng-bind-html="lastRoll"></div>
+</div>
+</div>
+  </fieldset>
+  <fieldset>
+<label>Combat!</label>
+<hr />
+<label>Monster HP</label>:
+<input type="text" value="" disabled size="3" />
+  </fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- VVVV-APP ENDS HERE-VVVV -->
+</div>
+<!-- New stuff -->
+
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+// bonusInit();
+</script>
+</body>
+</html>
